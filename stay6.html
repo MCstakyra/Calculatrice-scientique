@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="stay6.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <div id="display" class="display">0</div>
+        <div class="buttons-grid">
+            <!-- Scientific Functions -->
+            <button class="button function" data-value="sin(">sin</button>
+            <button class="button function" data-value="cos(">cos</button>
+            <button class="button function" data-value="tan(">tan</button>
+            <button class="button function" data-value="log(">log</button>
+            <button class="button function" data-value="ln(">ln</button>
+
+            <!-- Top Row -->
+            <button class="button clear" data-value="AC">AC</button>
+            <button class="button operator" data-value="DEL">DEL</button>
+            <button class="button operator" data-value="%">%</button>
+            <button class="button operator" data-value="/">/</button>
+            <button class="button function" data-value="Math.PI">π</button>
+
+            <!-- Second Row -->
+            <button class="button" data-value="7">7</button>
+            <button class="button" data-value="8">8</button>
+            <button class="button" data-value="9">9</button>
+            <button class="button operator" data-value="*">*</button>
+            <button class="button function" data-value="Math.E">e</button>
+
+            <!-- Third Row -->
+            <button class="button" data-value="4">4</button>
+            <button class="button" data-value="5">5</button>
+            <button class="button" data-value="6">6</button>
+            <button class="button operator" data-value="-">-</button>
+            <button class="button function" data-value="sqrt(">√</button>
+
+            <!-- Fourth Row -->
+            <button class="button" data-value="1">1</button>
+            <button class="button" data-value="2">2</button>
+            <button class="button" data-value="3">3</button>
+            <button class="button operator" data-value="+">+</button>
+            <button class="button function" data-value="^">x<sup>y</sup></button>
+
+            <!-- Bottom Row -->
+            <button class="button" data-value="0">0</button>
+            <button class="button" data-value=".">.</button>
+            <button class="button operator" data-value="(">(</button>
+            <button class="button operator" data-value=")">)</button>
+            <button class="button equals" data-value="=">=</button>
+        </div>
+
+        <!-- Gemini AI Feature -->
+        <div class="llm-input-container">
+            <input type="text" id="conceptInput" placeholder="Enter math concept (e.g., 'Pythagorean theorem')">
+            <button class="llm-button" id="explainConceptButton">✨ Explain Concept</button>
+        </div>
+    </div>
+
+    <!-- LLM Explanation Modal -->
+    <div id="explanationModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Mathematical Concept Explanation</h3>
+                <button class="modal-close-button" id="closeModalButton">×</button>
+            </div>
+            <div class="loading-spinner" id="spinner"></div>
+            <div class="modal-body" id="explanationText">
+                <!-- Explanation will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="stay6.js"></script>
+</body>
+</html>            
